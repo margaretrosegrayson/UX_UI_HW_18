@@ -1,14 +1,10 @@
-body {
-  background-color: #F0CCCB;
-  transition: background-color 1s ease;
-}
-
-/* navigation style */
+/* home navigation style */
 
 .nav {
   display: flex;
   height: 200px;
   width: auto;
+  background-color: #F0CCCB;
 }
 
 .push {
@@ -31,6 +27,11 @@ body {
   text-decoration: underline;
 }
 
+.push a:active {
+  text-decoration: none;
+  font-weight: 700;
+}
+
 .logo img {
   display: flex;
   align-items: center;
@@ -39,12 +40,13 @@ body {
   padding: 10px 10px 10px 100px;
 }
 
-/* hero section style */
+/* home hero section style */
 
 .hero {
   display: flex;
   height: 800px;
   width: auto;
+  background-color: #F0CCCB;
 }
 
 .hero h1 {
@@ -64,6 +66,18 @@ body {
   font-size: 24px;
   font-weight: 300;
   padding-bottom: 60px;
+}
+
+.hero h4 {
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 21px;
+  font-weight: 300;
+  height: 100%;
+  width: 100%;
+  padding-top: 200px;
+  padding-right: 150px;
 }
 
 .hero a {
@@ -100,8 +114,8 @@ body {
   padding: 0;
 }
 
-/* Case Study Styling */
-.caseStudy1, .caseStudy2, .caseStudy3 {
+/* Project Styling */
+.caseStudy-FTC, .caseStudy-ACHR, .caseStudy-Equil {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -112,16 +126,24 @@ body {
   height: 900px;
   width: auto;
 }
-.caseStudy1 {
+.caseStudy-FTC {
   background-color: #05CBFE;
 }
 
-.caseStudy2 {
+.caseStudy-ACHR {
   background-color: #A64E7E;
 }
 
-.caseStudy3 {
+.caseStudy-Equil {
   background-color: black;
+}
+
+.caseStudy-Silence {
+  background-color: lightgray;
+}
+
+.caseStudy-Broadway {
+  background-color: #D1B836;
 }
 
 #ftc {
@@ -244,6 +266,8 @@ body {
   width: auto;
   padding: 20px;
   display: flex;
+  background-color: #F0CCCB;
+  z-index: 1;
 }
 
 .footer h4 {
@@ -288,6 +312,8 @@ body {
   padding: 10px;
 }
 
+/* Back to top styling */
+
 #top {
   display: none;
   position: fixed;
@@ -317,3 +343,298 @@ body {
 #top:hover h4 {
   color: #F0CCCB;
 }
+
+/* FTC Nav Stylying */
+
+.navBlue {
+  display: flex;
+  height: 200px;
+  width: auto;
+  background-color: #05CBFE;
+}
+
+.logo img {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: auto;
+  padding: 10px 10px 10px 100px;
+}
+
+/* Projects Styling */
+.caseStudy-FTC, .caseStudy-ACHR, .caseStudy-Equil, .caseStudy-Broadway, .caseStudy-Silence {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+  "achr mockup-achr"
+  "equil mockup-equil"
+  "broadway mockup-broadway"
+  "silence mockup-silence";
+  height: 900px;
+  width: auto;
+  margin: 0;
+}
+
+#ftc {
+  width: 100%;
+  height: 100%;
+  grid-area: "ftc";
+}
+
+#ftc h2 {
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: white;
+  width: 100%;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  padding: 250px 0 0 100px;
+}
+
+#ftc h3 {
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+  color: white;
+  width: 100%;
+  padding: 0 0 0 100px;
+}
+
+.mockup-ftc img {
+  grid-area: "mockup-ftc";
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: span 3;
+  width: 100%;
+  height: auto;
+}
+
+#ftc a {
+  text-decoration: none;
+}
+
+#achr {
+  width: 100%;
+  height: 900px;
+  padding: 50px;
+  grid-area: "achr";
+  background-color: #A64E7E;
+}
+
+#achr h2 {
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: white;
+  padding: 250px 0 0 100px;
+}
+
+#achr h3 {
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+  color: white;
+  padding: 0 0 0 100px;
+}
+
+.mockup-achr img {
+  grid-area: "mockup-achr";
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: span 3;
+  width: 100%;
+  height: auto;
+}
+
+#achr a {
+  text-decoration: none;
+}
+
+#equil {
+  height: 100%;
+  width: 100%;
+  padding: 50px;
+  grid-area: "equil";
+  background-color: black;
+}
+
+#equil h2 {
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: white;
+  padding: 250px 0 0 100px;
+}
+#equil h3 {
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+  color: white;
+  padding: 0 0 0 100px;
+}
+
+.mockup-equil img {
+  grid-area: "mockup-equil";
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: span 3;
+  width: 100%;
+  height: 100%;
+}
+
+#equil a {
+  text-decoration: none;
+}
+
+#broadway {
+  height: 100%;
+  width: 100%;
+  padding: 50px;
+  grid-area: "broadway";
+}
+
+#broadway h2 {
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: white;
+  padding: 250px 0 0 100px;
+}
+
+#broadway h3 {
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+  color: white;
+  padding: 0 0 0 100px;
+}
+
+.mockup-broadway img {
+  grid-area: "mockup-broadway";
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: span 3;
+  width: 100%;
+  height: 100%;
+  padding-top: 150px;
+}
+
+#broadway a {
+  text-decoration: none;
+}
+
+#silence {
+  height: 900px;
+  width: 100%;
+  padding: 50px;
+  grid-area: "silence";
+}
+
+#silence h2 {
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: white;
+  padding: 250px 0 0 100px;
+}
+
+#silence h3 {
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+  color: white;
+  padding: 0 0 0 100px;
+}
+
+.mockup-silence img {
+  grid-area: "mockup-silence";
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-start: span 3;
+  width: 100%;
+  height: 100%;
+}
+
+#silence a {
+  text-decoration: none;
+}
+
+/* About Me Styling */
+
+.info {
+  background-color: #F0CCCB;
+  line-height: 1.5em;
+  padding-top: 20px;
+}
+
+.info a {
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: black;
+  height: 100%;
+  width: 100%;
+}
+
+.info a:hover {
+  text-decoration: underline;
+}
+
+.info img {
+  padding: 0 0 15px 20px;
+  height: 30px;
+  width: auto;
+}
+
+.info h2 {
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: black;
+  padding-left: 100px;
+  display: flex;
+
+}
+
+.info p {
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  padding-left: 100px;
+}
+
+.info ul {
+  padding-left: 150px;
+}
+
+.info li {
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+}
+
+#roots {
+  padding-bottom: 100px;
+}
+
+#roots p {
+  height: auto;
+  width: 50%;
+}
+
+#goals {
+  padding-bottom: 100px;
+}
+
+#goals p {
+  height: auto;
+  width: 50%
+}
+
+
