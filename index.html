@@ -4,10 +4,14 @@
   <link href="CSS/style.css" type="text/css" rel="stylesheet">
   <link href="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body style="margin: 0;">
 <!-- Nav HTML -->
+<div class="menu">
+    <span></span>
+</div>
 <div class="nav">
     <div class="logo"><a href="index.html"><img src="Images/Logo.png"></a></div>
     <div class="push">
@@ -25,7 +29,7 @@
 </div>
 <!-- Case Study 1 -->
 <div class="caseStudy-FTC">
-  <div id="ftc"><a href="projects.html">
+  <div id="ftc"><a href="#">
     <h2>Simplifying the FTC</h2>
     <h3>A responsive web redesign</h3>
   </div>
@@ -59,27 +63,33 @@
         <button onclick="topFunction()" id="top" title="Go to top"><h4>Back to top</h4></button>
     </div>  
 </div>
-
-<script>
-    //Get the button
-    var mybutton = document.getElementById("top");
-    
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
-    
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
-      }
-    }
-    
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-    </script>
 </body>
+<script>
+  //Get the button
+  var mybutton = document.getElementById("top");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>  
+<!-- Hamburger Menu-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>$(".menu").click(function() {
+    $(".menu").toggleClass("active");
+    $(".push").toggleClass("active");
+  });
+</script>
 </html>

@@ -8,6 +8,9 @@
 
 <body style="margin: 0; background-color: #F0CCCB;">
 <!-- Nav HTML -->
+<div class="menu">
+  <span></span>
+</div>
 <div class="nav">
     <div class="logo"><a href="index.html"><img src="Images/Logo.png"></a></div>
     <div class="push">
@@ -87,5 +90,11 @@
       document.documentElement.scrollTop = 0;
     }
     </script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>$(".menu").click(function() {
+    $(".menu").toggleClass("active");
+    $(".push").toggleClass("active");
+  });
+</script>
 </body>
 </html>
